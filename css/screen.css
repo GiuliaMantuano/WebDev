@@ -1,0 +1,168 @@
+/* CSS Document for Screens */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+body { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; color: #687074; margin: 0; padding: 0 }
+
+#page { max-width: 1200px; margin: 0 auto; position: relative; }
+
+/* Text */
+
+h1 {margin: 0 0 1em 0; font-size: 3em; font-weight: 100; color:#687074; text-align: center; }
+h2 {margin: 0 0 .5em 0; font-size: 1.5em; font-weight: 100; line-height: 1.1em; color:#687074; text-align: center; }
+h3 {margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 300; }
+h4 {margin: 0 0 1.5em 0; font-size: 1em; font-weight: 300; }
+
+p { margin: 0 0 1em 0; }
+
+a { color: #007eff; }
+a:visited { color: #65b1ff; }
+
+a.btn {
+    text-decoration: none; color: #fff;
+    border: 1px solid #fff; border-radius: 6px;
+    padding: 15px 15px;
+    transition: background-color .5s;
+}
+
+a.btn:hover { background-color: #fff; color: #687074; }
+
+
+/* Header */
+
+header {
+    height: 637px;
+    background: #fff url(/Users/Juria/Documents/Websites/myCoduranceWebsite/images/banner_large.jpg) no-repeat center bottom;
+    position: relative;
+}
+
+header a.logo {
+    position: absolute;
+    display: block; width: 208px; height: 39px;
+    background: url(/Users/Juria/Documents/Websites/myCoduranceWebsite/images/logo.svg) no-repeat 0 0;
+    background-size: contain;
+    top: 15px;
+    left: 20px;
+}
+
+header a.logo span {
+    display: none;
+}
+
+header div.hero {
+    position: absolute;
+    max-width: 1140px; top: 200px;
+    text-align: center;
+    display: block;
+}
+
+header div.hero h1 {
+    line-height: 1.2em;
+    margin: 0 0 30px 0;
+    color: #fff;
+}
+
+header div.hero h2 {
+    line-height: 1.2em;
+    margin: 0 0 50px 0;
+    color: #fff;
+}
+
+
+/* Section - All */
+
+section {
+    padding: 0 30px;
+}
+
+.title-header {
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.title-header p {
+    position: relative;
+    font-size: .7em;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 60px;
+}
+
+section.our-service .aside .content {
+    width: 33%;
+}
+
+
+/* Section - Our services */
+
+section.our-services {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+section.our-services aside {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+section.our-services .content {
+    margin: 15px;
+    background: no-repeat center top;
+    background-size: 75px 75px;
+}
+
+section.our-services .software-creation .service-card-top {
+    text-align: center;
+    padding: 30px 0px;
+    width: 320px;
+    height: 160px;
+    background-color: #ff0000;
+}
+
+section.our-services .service-card-top h4 a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #fff;
+}
+
+section.our-services .service-card-top h4 a:hover {
+    text-decoration: underline;
+}
+
+section.our-services .service-card-top icon Software Creation {
+    background-image: url(/Users/Juria/Documents/Websites/myCoduranceWebsite/images/software-creation-icn.svg);
+}
+
+section.our-services .software-creation .service-card-bottom {
+    text-align: center;
+    padding: 10px 0px 30px;
+    margin: 0px;
+    width: 320px;
+    height: 222px;
+    background-color: #cc0000;
+}
+
+
+section.our-services .service-card-bottom .list-unstyled {
+    position: relative;
+    padding-left: 10px;
+    list-style: none;
+    line-height: 1.5em;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+section.our-services .service-card-bottom .btn {
+    text-decoration: none; color: #fff;
+    border: 1px solid #fff; border-radius: 6px;
+    padding: 15px 15px;
+    transition: background-color .5s;
+}
+
+section.our-services .service-card-bottom .btn:hover { background-color: #ff0000; color: #fff; border: none; }
