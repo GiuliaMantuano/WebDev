@@ -37,6 +37,7 @@ header {
 }
 
 header a.logo {
+    z-index: 1;
     position: absolute;
     display: block; width: 208px; height: 39px;
     background: url(/Users/Juria/Documents/Websites/myCoduranceWebsite/images/logo.svg) no-repeat 0 0;
@@ -51,7 +52,7 @@ header a.logo span {
 
 header div.hero {
     position: absolute;
-    max-width: 1140px; top: 200px;
+    max-width: 1000px; top: 200px;
     text-align: center;
     display: block;
 }
@@ -75,6 +76,10 @@ section {
     padding: 0 30px;
 }
 
+section::after {
+    content: ''; display:block; clear: both;
+}
+
 .title-header {
     position: relative;
     font-size: 1.5em;
@@ -93,6 +98,12 @@ section {
 
 section.our-service .aside .content {
     width: 33%;
+}
+
+section.our-services .service-card-top h4 a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -120,22 +131,14 @@ section.our-services .software-creation .service-card-top {
     text-align: center;
     padding: 30px 0px;
     width: 320px;
-    height: 160px;
+    height: 100px;
     background-color: #ff0000;
-}
-
-section.our-services .service-card-top h4 a {
-    font-size: 1.3em;
-    text-decoration: none;
-    color: #fff;
-}
-
-section.our-services .service-card-top h4 a:hover {
-    text-decoration: underline;
 }
 
 section.our-services .service-card-top icon Software Creation {
     background-image: url(/Users/Juria/Documents/Websites/myCoduranceWebsite/images/software-creation-icn.svg);
+    margin: 0px auto 5px;
+    vertical-text: bottom;
 }
 
 section.our-services .software-creation .service-card-bottom {
@@ -150,7 +153,7 @@ section.our-services .software-creation .service-card-bottom {
 
 section.our-services .service-card-bottom .list-unstyled {
     position: relative;
-    padding-left: 10px;
+    padding: 0px;
     list-style: none;
     line-height: 1.5em;
     color: #fff;
@@ -165,4 +168,124 @@ section.our-services .service-card-bottom .btn {
     transition: background-color .5s;
 }
 
-section.our-services .service-card-bottom .btn:hover { background-color: #ff0000; color: #fff; border: none; }
+section.our-services .software-creation .service-card-bottom .btn:hover { background-color: #ff0000; color: #fff; border: none; }
+
+section.our-services .expert-advice .service-card-top {
+    text-align: center;
+    padding: 30px 0px;
+    width: 320px;
+    height: 100px;
+    background-color: #ff6600;
+}
+
+section.our-services .expert-advice .service-card-bottom {
+    text-align: center;
+    padding: 10px 0px 30px;
+    margin: 0px;
+    width: 320px;
+    height: 222px;
+    background-color: #cc3300;
+}
+
+section.our-services .expert-advice .service-card-bottom .btn:hover { background-color: #ff6600; color: #fff; border: none; }
+
+section.our-services .training-coaching .service-card-top {
+    text-align: center;
+    padding: 30px 0px;
+    width: 320px;
+    height: 100px;
+    background-color: #ffcc33;
+}
+
+section.our-services .training-coaching .service-card-bottom {
+    text-align: center;
+    padding: 10px 0px 30px;
+    margin: 0px;
+    width: 320px;
+    height: 222px;
+    background-color: #ff9900;
+}
+
+section.our-services .training-coaching .service-card-bottom .btn:hover { background-color: #ffcc33; color: #fff; border: none; }
+
+
+/* Navigation */
+
+nav {
+    background-color: rgba(230,230,230,.90);
+    position: absolute;
+    top: 0px; left: 0px;
+    padding: 50px 0 0;
+    width: 100%;
+}
+
+nav::after { content: ''; display: block; clear: both; }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:hover { background-color: #2b0306; }
+
+nav ul li:hover > ul { display: block; }
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:visited {color: #fff; }
+
+nav ul li a:hover { background-color: #6d0911; }
+
+nav ul ul { position: absolute; top: 100%; background-color: #2b0306; display: none; }
+
+nav ul ul li { position: relative; }
+
+nav ul ul ul { left: 100%; top: 0px; }
+
+
+/* top-level */
+
+nav > ul { padding-left: 250px; }
+
+nav > ul > li { float: left; }
+
+nav > ul > li > a { width: auto;  padding: 10px 20px 15px 20px;   }
+
+nav a[aria-haspopup="true"]::after {
+    content: '';
+    display: block; width: 0px; height: 0px;
+    position: absolute;
+    top: 16px; right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    left: 20px; right: auto;
+    bottom: 6px; top: auto;
+
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+
+    h1 { font-size: 2.4em; }
+    
+    /* Header */
+    header div. hero { left: 56% }
+    header div.hero h1 { margin-bottom: 20px; }
+    
+
